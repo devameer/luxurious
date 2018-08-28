@@ -1,44 +1,4 @@
-/* ------------------------------------------------
-  Project:   Oveltyshop - ECommerce Responsive HTML5 Template
-  Author:    ThemeHt
------------------------------------------------- */
 
-/* ------------------------
-    Table of Contents
-
-  1. General
-  2. Transition
-  3. Transform translate
-  4. Box Shadow
-  5. Custom Margin
-  6. Custom Padding  
-  7. Padding
-  8. Margin
-  9. Pre Loader
-  10. Row Eq Height
-  11. Background Overlay
-  12. Scroll to Top
-  13. Subscribe
-  14. Page Title
-  15. Top Bar
-  16. Header Search
-  17. Header Cart
-  18. Header
-  19. Navigation
-  20. Side Navbar
-  21. Footer
-  22. Social Icons
-  23. Tab
-  24. Button
-  25. Section Title
-  26. Featured Box
-  27. Blog - Post
-  28. Testimonial
-  29. Client Logo
-  30. Jarallax
-  31. Border Radius
-  32. Flaticon
- 
 /* ------------------------
     General
 ------------------------*/
@@ -389,6 +349,7 @@ input.form-product,
     top: 0;
     width: 100%;
     z-index: 99999;
+    display: none;
 }
 
 .clear-loader {
@@ -625,7 +586,7 @@ input.form-product,
 
 .page-title h1 {
     font-size: 40px;
-    color: #221b1b;
+    color: #fff;
     line-height: 40px;
     text-transform: uppercase;
     font-weight: 800;
@@ -669,8 +630,6 @@ input.form-product,
 
 .header-social ul li{
     display: inline-block;
-    line-height: 53px;
-    width: 40px;
     text-align: center;
     -o-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
@@ -680,9 +639,12 @@ input.form-product,
 }
 .header-social ul li a {
     font-size: 14px;
-    color: #ccd8dc;
+    color: #373b47;
     text-align: center;
-    height: 30px;
+    width: 40px;
+    display: inline-block;
+    line-height: 53px;
+
 }
 .header-social ul li:hover {
     background: #bb9e6a;
@@ -691,6 +653,10 @@ input.form-product,
     -moz-transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+}
+.header-social ul li:hover a{
+    color: #fff
+
 }
 
 
@@ -745,7 +711,14 @@ input.form-product,
 .topbar-menu li ul li:last-child a {
     border-bottom: none;
 }
-
+.topbar-menu .dropdown button{
+padding-left: 0;
+padding-right: 0;
+}
+.topbar-menu .dropdown button:hover{
+    background: none;
+    color: #000
+}
 .theme-bg .topbar-link li a,
 .theme-bg .topbar-menu>li>a,
 .dark-bg .topbar-link li a,
@@ -803,9 +776,10 @@ input.form-product,
     background: none;
     border: none;
     box-shadow: none;
-    color: #221b1b;
+    color: #fff;
     font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-search-close {
@@ -1097,9 +1071,18 @@ input.form-product,
 }
 
 #header-wrap {
-    background: #ffffff;
+    background: #373b47;
+    position: relative;
 }
+#header-wrap .navbar-nav .nav-link{
+    color: #fff;
+}
+#header-wrap .navbar-nav .nav-link:hover{
 
+color:     #bb9e6a
+
+
+}
 #header-wrap.fixed-header {
     position: fixed;
     top: 0;
@@ -1108,9 +1091,16 @@ input.form-product,
     z-index: 999 !important;
     background: #ffffff !important;
 }
-
+#header-wrap.fixed-header .navbar-nav .nav-link,
+#header-wrap.fixed-header .btn-search{
+    color: #111
+}
+.nav-link.has-submenu ,
+.btn-search{
+    transition: all 0s ease-in-out 0s;
+}
 .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 #header-wrap.fixed-header .logo img {
@@ -1539,7 +1529,7 @@ input.form-product,
 
 .secondary-footer {
     padding: 15px 0;
-    background: #221b1b;
+    background: #fff;
 }
 
 .footer-logo img {
@@ -2552,3 +2542,23 @@ footer.dark-bg .social-icons li a {
 .flaticon-delete-button:before {
     content: "\f117";
 }
+
+.add-adev label ,
+.add-adev span.span-img 
+{
+    font-weight: 700;
+    font-size: 15px;
+}
+.add-adev .add-adev-btn{
+    background: #bb9e6a;
+    color: #fff
+}
+.add-adev .add-adev-btn:hover{
+    opacity: 0.7;
+}
+.nav-arrows span{
+    color: #fff
+}
+.fotorama__thumb-border {
+    border-color: #bb9e6a !important;
+    }

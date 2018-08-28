@@ -1,36 +1,4 @@
-/* ------------------------------------------------
-  Project:   Oveltyshop - ECommerce Responsive HTML5 Template
-  Author:    ThemeHt
------------------------------------------------- */
-/* ------------------------
-    Table of Contents
 
-  1. Predefined Variables
-  2. Preloader  
-  3. FullScreen
-  4. Slit Slider
-  5. Counter
-  3. Owl carousel
-  7. Audioplayer
-  9. Magnific Popup
-  10. Isotope
-  11. Scroll to top
-  12. Banner Section
-  13. Fixed Header
-  14. Text Color, Background Color And Image
-  15. Accordian
-  16. Contact Form
-  17. Searchbox
-  18. ProgressBar
-  19. Masonry
-  20. Countdown
-  21. Mailchimp
-  22. jarallax
-  23. Particles
-  24. HT Window load and functions
-  
-
------------------------- */
 
 "use strict";
 
@@ -137,6 +105,7 @@ $('.owl-carousel').each( function() {
       slideBy : $carousel.data("slideby"),
       center : $carousel.data("center"),
       loop : true,
+      rtl : $carousel.data("rtl"),
       margin : $carousel.data("margin"),
       dots : $carousel.data("dots"),
       nav : $carousel.data("nav"),      
@@ -155,83 +124,11 @@ $('.owl-carousel').each( function() {
 };
 
 
-/*------------------------------------
-  HT Magnific Popup
---------------------------------------*/
-function magnificpopup() {
-$('.popup-gallery').magnificPopup({
-    delegate: 'a.popup-img',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
-        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-      }
-    }
-  });
-if ($(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
-     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-          disableOn: 700,
-          type: 'iframe',
-          mainClass: 'mfp-fade',
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false
-    });
-  }
-
-};
-        
+   
 
 /*------------------------------------
   HT Isotope
 --------------------------------------*/ 
-function isotope() {
-  // init Isotope
-  var $grid = $('.grid').isotope({
-    itemSelector: '.grid-item',
-    layoutMode: 'fitRows',
-  });
-
-  // filter functions
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function() {
-      var number = $(this).find('.number').text();
-      return parseInt( number, 10 ) > 50;
-    },
-    // show if name ends with -ium
-    ium: function() {
-      var name = $(this).find('.name').text();
-      return name.match( /ium$/ );
-    }
-  };
-
-  // bind filter button click
-  $('.portfolio-filter').on( 'click', 'button', function() {
-    var filterValue = $( this ).attr('data-filter');
-    // use filterFn if matches value
-    filterValue = filterFns[ filterValue ] || filterValue;
-    $grid.isotope({ filter: filterValue });
-  });
-
-
-  // change is-checked class on buttons
-  $('.portfolio-filter').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
-    });
-  });
-};
 
 
 /*------------------------------------
@@ -341,41 +238,14 @@ function contactform() {
 };
 
 
-/*------------------------------------
-  HT Masonry
---------------------------------------*/
-function masonry () {
-  var $masonry = $('.masonry'),
-      $itemElement = '.masonry-brick',
-      $filters = $('.portfolio-filter');  
-      if ($masonry.exists()) {
-        $masonry.isotope({
-          resizable: true,
-          itemSelector: $itemElement,
-        });
 
-         // bind filter button click
-     $filters.on( 'click', 'button', function() {
-        var filterValue = $(this).attr('data-filter');
-         $masonry.isotope({ filter: filterValue });
-      });
-   }  
-};
+
+
 
 
 /*------------------------------------
   HT Countdown
 --------------------------------------*/
-function countdown () {
- $(".countdown").countdown('2018/09/23 00:00', function(event) {
-      $(this).html(event.strftime(
-          '<li><span>%-D</span><p>Days</p></li>' +
-          '<li><span>%-H</span><p>Hours</p></li>' +
-          '<li><span>%-M</span><p>Minutes</p></li>' +
-          '<li><span>%S</span><p>Seconds</p></li>'
-      ));
-  });
-};
 
 
 /*------------------------------------
@@ -387,91 +257,6 @@ function cart () {
     })    
 };
 
-/*------------------------------------
-  HT Slick Slider
---------------------------------------*/
-function slickslider() {
-  $(".vertical").slick({
-    dots: false,
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
-  $('.slick3').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    dots: true,
-    appendDots: $('.slick3-dots-main'),
-    dotsClass: 'slick3-dots',
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    arrows: false,
-    customPaging: function (slick, index) {
-      var portrait = $(slick.$slides[index]).data('thumb');
-      return '<img src=" ' + portrait + ' "/><div class="slick3-dot-overlay"></div>';
-    },
-  });
-  $('.btn-product-up').on('click', function (e) {
-    e.preventDefault();
-    var numProduct = Number($(this).next().val());
-    if (numProduct > 1) $(this).next().val(numProduct - 1);
-  });
-  $('.btn-product-down').on('click', function (e) {
-    e.preventDefault();
-    var numProduct = Number($(this).prev().val());
-    $(this).prev().val(numProduct + 1);
-  });
-};
-
-/*------------------------------------
-  HT jarallax
---------------------------------------*/
-function jarallax() {
-  $('.jarallax').jarallax({});
-
-  var e, i = $(window).height(),
-            n = i / 2;
-        $(document).scroll(function() {
-            e = $(window).scrollTop(), $(".insideText").each(function() {
-                var i = $(this),
-                    o = i.parent("section"),
-                    s = o.offset().top;
-                i.css({
-                    top: -(s - e) + n + "px"
-                })
-            }), $(".bg-text").each(function() {
-                var e = $(this),
-                    i = $(window).height() / 2,
-                    n = e.parent("div"),
-                    o = $(window).scrollTop(),
-                    s = n.offset().top;
-                $(this).css({
-                    top: -(s - o) + i + "px"
-                })
-            })
-    })
-};
-
-/*------------------------------------
-  HT jarallax
---------------------------------------*/
-function rangeslider() {
-  $( "#slider-range" ).slider({
-      range: true,
-      min: 0,
-      max: 500,
-      values: [ 75, 300 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-};
 
 
 /*------------------------------------
@@ -503,17 +288,13 @@ $(document).ready(function() {
     owlcarousel(),
     fullScreen(),
     slitslider(),
-    magnificpopup(),
     scrolltop(),
     headerheight()
     fxheader(),
     databgcolor(),  
     contactform(),
-    countdown(),
     cart(),
-    slickslider(),
-    jarallax(),
-    rangeslider(),
+
     niceSelect();
 });
 
@@ -525,8 +306,6 @@ $window.resize(function() {
 
 $(window).on('load', function() {
     preloader(),
-    isotope(),
-    masonry(),
     wowanimation();
 });
 

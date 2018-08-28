@@ -7,3 +7,16 @@ body{
 .navbar-nav .nav-link{
     font-weight: 700;
 }
+h1{
+    font-family: 'Cairo', sans-serif;
+
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    padding-left: .5rem;
+    padding-right: 0;
+}
+
+.login-form .form-group i, .register-form .form-group i{
+    right: auto;
+    left: 20px;
+}

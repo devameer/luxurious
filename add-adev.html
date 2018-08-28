@@ -8,14 +8,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="HTML5 Template" />
   <meta name="description" content="HTML5 Template" />
-  <meta name="author" content="www.themeht.com" />
+  <meta name="author" content="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Oveltyshop - ECommerce Responsive HTML5 Template</title>
+  <title>luxurious</title>
 
   <!-- favicon icon -->
   <link rel="shortcut icon" href="images/favicon.ico" />
 
   <!-- inject css start -->
+  <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700" rel="stylesheet">
 
   <!--== bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -29,11 +30,7 @@
   <!--== themify-icons -->
   <link href="css/themify-icons.css" rel="stylesheet" type="text/css" />
 
-  <!--== magnific-popup -->
-  <link href="css/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
 
-  <!--== jquery-ui -->
-  <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
 
   <!--== owl-carousel -->
   <link href="css/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
@@ -41,8 +38,6 @@
   <!--== slit-slider -->
   <link href="css/slit-slider/slit-slider.css" rel="stylesheet" type="text/css" />
 
-  <!--== slick-slider -->
-  <link href="css/slick-slider/slick.css" rel="stylesheet" type="text/css" />
 
   <!--== nice-select -->
   <link href="css/nice-select.css" rel="stylesheet" type="text/css" />
@@ -55,6 +50,8 @@
 
   <!--== responsive -->
   <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  <link href="css/fotorama.css" rel="stylesheet" type="text/css" />
+  <link href="css/style-rtl.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -113,35 +110,29 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-8 text-md-right">
+            <div class="col-lg-6 col-md-8 text-md-left">
               <div class="topbar-right">
                 <ul class="topbar-menu">
                   <!-- Currency / Language / My Account -->
-                  <li class="currency">
-                    <div class="currency-selection">
-                      <select class="select">
-                        <option value="1">Usd</option>
-                        <option value="2">cad</option>
-                        <option value="3">aud</option>
-                        <option value="4">eur</option>
-                      </select>
-                    </div>
-                  </li>
+
                   <li class="language">
                     <div class="language-selection">
-                      <select class="select">
-                        <option value="1">English</option>
-                        <option value="2">العربية</option>
-                        
-                        
-                      </select>
+                      <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          اللغة
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">العربية</a>
+                          <a class="dropdown-item" href="en/index.html">الانجليزية</a>
+                        </div>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <a href="login.html">Sign In</a>
+                    <a href="login.html">تسجيل الدخول</a>
                   </li>
                   <li>
-                    <a href="register.html">Register</a>
+                    <a href="register.html">التسجيل</a>
                   </li>
                 </ul>
               </div>
@@ -167,30 +158,30 @@
                   <!-- Left nav -->
                   <ul class="nav navbar-nav ml-auto mr-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
+                      <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="about-us.html"> About Us </a>
+                      <a class="nav-link" href="about-us.html"> من نحن </a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#">
-                        <span class="menu-label">Category</span>
+                        <span class="menu-label">الأقسام</span>
                       </a>
                       <ul class="dropdown-menu">
 
                         <li>
-                          <a class="dropdown-item" href="category.html">watches</a>
+                          <a class="dropdown-item" href="category.html">ساعات</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="category.html">jewellers</a>
+                          <a class="dropdown-item" href="category.html">مجوهرات</a>
                         </li>
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="add-adev.html"> New Ads</a>
+                      <a class="nav-link" href="add-adev.html"> إضافة اعلات</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contact.html"> contact us</a>
+                      <a class="nav-link" href="contact.html"> اتصل بنا</a>
                     </li>
 
 
@@ -218,669 +209,626 @@
       </button>
       <form class="search-form">
         <input class="search-input" name="search" type="search" placeholder="drones" />
-        <span class="search-info">Hit enter to search or ESC to close</span>
+        <span class="search-info">اضغط Enter للبحث أو ESC للإغلاق</span>
       </form>
     </div>
 
     <!--header end-->
 
 
+    <!--page title start-->
 
-        <!--page title start-->
+    <section class="page-title o-hidden" data-bg-img="images/bg/02.jpg">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 col-md-12">
+            <h1 class="mb-3">إضافة
+              <span class="text-theme">إعلان</span>
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-4 justify-content-end">
+                <li class="breadcrumb-item">
+                  <a href="index-5.html">
+                    <i class="fas fa-home"></i>
+                  </a>
+                </li>
 
-        <section class="page-title o-hidden" data-bg-img="images/bg/02.jpg">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 col-md-12">
-                        <h1 class="mb-3">Contact
-                            <span class="text-theme">us 2</span>
-                        </h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb breadcrumb-4 justify-content-end">
-                                <li class="breadcrumb-item">
-                                    <a href="index-5.html">
-                                        <i class="fas fa-home"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="#">contact us</a>
-                                </li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact 2</li>
-                            </ol>
-                        </nav>
+                <li class="breadcrumb-item active" aria-current="page">إضافة إعلان</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--page title end-->
+
+
+    <!--body content start-->
+
+    <div class="page-content">
+
+
+      <!--contact start-->
+
+      <section class="contact-2 add-adev o-hidden">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-12 col-md-12 md-mt-5">
+              <div class="contact-main white-bg">
+                <h2 class="title mb-5">إضافة
+                  <span>إعلان</span>
+                </h2>
+                <form id="contact-form" class="row mt-3" method="post" action="#">
+                  <div class="form-group col-sm-6">
+                    <label>القسم
+                      <span style="color:red">*</span>
+                    </label>
+                    <select class="form-control" name="cat_id" id="cats_id">
+
+
+
+                      <option value="">اختر</option>
+
+
+                      <option value=" 1"> ...</option>
+
+
+                      <option value=" 2"> ...</option>
+
+
+                    </select>
+                    <!-- <input type="text" name="name" class="form-control" placeholder="User Name"> -->
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label>نوع الاعلان </label>
+                    <select class="form-control" name="cat_id" id="cats_id">
+
+
+
+                      <option value="">اختر</option>
+
+
+                      <option value=" 1"> ..</option>
+
+
+                      <option value=" 2"> ..</option>
+
+
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label>السعر
+                      <span style="color:red">*</span>
+                    </label>
+
+                    <input type="text" name="name" class="form-control" placeholder="السعر">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label>الموديل
+                    </label>
+
+                    <input type="text" name="name" class="form-control" placeholder="الموديل">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label>رقم الموديل
+                    </label>
+
+                    <input type="text" name="name" class="form-control" placeholder="مثال : 15700ST">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label>الحجم
+                    </label>
+
+                    <input type="text" name="name" class="form-control" placeholder="مثال : 42mm">
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label>الجنس </label>
+                    <select class="form-control" name="gender" id="gender">
+                      <option value="mens">رجالي</option>
+                      <option value="womens">نسائي</option>
+                      <option value="unisex">موحد</option>
+
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-sm-6">
+                    <label>الحالة </label>
+                    <select class="form-control" name="condition" id="condition">
+                      <option value="new">جديدة</option>
+                      <option value="excellent">ممتاز</option>
+                      <option value="good">جيد</option>
+                      <option value="fair">مقبول</option>
+                      <option value="poor">ضعيف</option>
+                      <option value="damaged">متضرر </option>
+
+                    </select>
+                  </div>
+
+
+                  <div class="form-group col-sm-12">
+                    <label>المدينة </label>
+                    <select class="form-control" name="city" id="city">
+
+
+                      <option value="524">الرياض</option>
+
+
+
+
+
+
+                      <option value="525">مكة</option>
+
+
+
+
+
+
+                      <option value="526">المدينة المنورة</option>
+
+
+
+
+
+
+                      <option value="527">حائل</option>
+
+
+
+
+
+
+                      <option value="528">تبوك</option>
+
+
+
+
+
+
+                      <option value="529">الدمام</option>
+
+
+
+
+
+
+                      <option value="530">الاحساء</option>
+
+
+
+
+
+
+                      <option value="531">القطيف</option>
+
+
+
+
+
+
+                      <option value="532">خميس مشيط</option>
+
+
+
+
+
+
+                      <option value="533">الطائف</option>
+
+
+
+
+
+
+                      <option value="534">نجران</option>
+
+
+
+
+
+
+                      <option value="535">حفر الباطن</option>
+
+
+
+
+
+
+                      <option value="536">الجبيل</option>
+
+
+
+
+
+
+                      <option value="537">القصيم</option>
+
+
+
+
+
+
+                      <option value="538">ابها</option>
+
+
+
+
+
+
+                      <option value="539">الخرج</option>
+
+
+
+
+
+
+                      <option value="540">الطائف</option>
+
+
+
+
+
+
+                      <option value="541">ينبع </option>
+
+
+
+
+
+
+                      <option value="542">الخبر</option>
+
+
+
+
+
+
+                      <option value="543">عرعر</option>
+
+
+
+
+
+
+                      <option value="544">الخفجي</option>
+
+
+
+
+
+
+                      <option value="545">عنيزة</option>
+
+
+
+
+
+
+                      <option value="546">سكاكا</option>
+
+
+
+
+
+
+                      <option value="547">جيزان</option>
+
+
+
+
+
+
+                      <option value="548">القريات</option>
+
+
+
+
+
+
+
+
+
+
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group form-check">
+                      <label class="form-check-label" for="Check1">صندوق</label>
+                      <input type="checkbox" class="form-check-input" id="Check1">
+
                     </div>
-                </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group form-check">
+                      <label class="form-check-label" for="Check2">اوراق</label>
+
+                      <input type="checkbox" class="form-check-input" id="Check2">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group form-check">
+                      <label class="form-check-label" for="Check3">ايصال</label>
+
+                      <input type="checkbox" class="form-check-input" id="Check3">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <span class="d-block span-img ">الصور</span>
+                      <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                      <label for="file" class="btn">
+                        <strong> اضف صور</strong>
+                        <span></span>
+                      </label>
+                      <p>(يفضل رفع 4 صور على الأقل بجودة جيدة)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>وصف الإعلان عربي</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>وصف الإعلان انجليزى</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>الجوال
+                        <span style="color:red">*</span>
+                      </label>
+
+                      <input type="text" name="name" class="form-control" placeholder="Mobile">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn add-adev-btn"> اضافة اعلان</button>
+                </form>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!--contact end-->
+
+
+      <!--newsletter start-->
+
+      <section class="theme-bg py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <h2 class="title">القائمة
+                <span>البريدية</span>
+              </h2>
+            </div>
+            <div class="col-lg-8 col-md-12 md-mt-3">
+              <div class="subscribe-form">
+                <form id="mc-form" class="group row align-items-center">
+                  <div class="col-sm-8">
+                    <input type="email" value="" name="EMAIL" class="email box-shadow" id="mc-email" placeholder="البريد الالكتروني" required="">
+                  </div>
+                  <div class="col-sm-4 xs-mt-1">
+                    <input class="btn btn-white btn-circle" type="submit" name="subscribe" value="إشتراك">
+                  </div>
+                  <label for="mc-email" class="subscribe-message"></label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--newsletter end-->
+
+    </div>
+
+    <!--body content end-->
+
+
+    <!--footer start-->
+
+    <footer class="footer dark-bg">
+      <div class="primary-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 footer-list">
+              <h5> الأقسام </h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">الساعات</a>
+                </li>
+                <li>
+                  <a href="#">المجوهرات</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 xs-mt-5 footer-list">
+              <h5>الصفحات</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">الرئيسية</a>
+                </li>
+                <li>
+                  <a href="#">معلومات عنّا</a>
+                </li>
+                <li>
+                  <a href="#">اضافة اعلان</a>
+                </li>
+                <li>
+                  <a href="#">اتصل بنا</a>
+                </li>
+                <li>
+                  <a href="#">تسجيل الدخول</a>
+                </li>
+                <li>
+                  <a href="#">التسجيل</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 md-mt-5 footer-list">
+              <h5>حسابي</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">تعديل البيانات الشخصية</a>
+                </li>
+                <li>
+                  <a href="#">اعلاناتي</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 md-mt-5">
+              <h5>اتصل بنا</h5>
+              <ul class="media-icon list-unstyled">
+                <li class="mb-4">
+                  <p class="mb-0">423B, Road Wordwide Country, KSA</p>
+                </li>
+                <li class="mb-4">
+                  <a href="mailto:info@gmail.com">info@gmail.com</a>
+                </li>
+                <li class="mb-4">
+                  <a href="tel:0096612154545">(0966) 12154545</a>
+                </li>
+                <li>
+                  <p class="mb-0">Working Hours: 9:00am - 8:00pm</p>
+                </li>
+              </ul>
+
+              <div class="footer-social mt-4">
+                <ul class="list-unstyled d-flex">
+                  <li class="ml-3">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="ml-3">
+                    <a href="#">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="ml-3">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="ml-3">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-        <!--page title end-->
-
-
-        <!--body content start-->
-
-        <div class="page-content">
-
-
-            <!--contact start-->
-
-            <section class="contact-2 o-hidden">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-md-12 md-mt-5">
-                            <div class="contact-main white-bg">
-                                <h2 class="title mb-5">Add
-                                    <span>Advertising</span>
-                                </h2>
-                                <form id="contact-form" class="row mt-3" method="post" action="#">
-                                    <div class="form-group col-sm-6">
-                                        <label>Category
-                                            <span style="color:red">*</span>
-                                        </label>
-                                        <select class="form-control" name="cat_id" id="cats_id">
-
-
-
-                                            <option value="">Choose</option>
-
-
-                                            <option value=" 1"> watches</option>
-
-
-                                            <option value=" 2"> jewellers</option>
-
-
-                                        </select>
-                                        <!-- <input type="text" name="name" class="form-control" placeholder="User Name"> -->
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <label>Type </label>
-                                        <select class="form-control" name="cat_id" id="cats_id">
-
-
-
-                                            <option value="">Choose</option>
-
-
-                                            <option value=" 1"> watches</option>
-
-
-                                            <option value=" 2"> jewellers</option>
-
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <label>Price
-                                            <span style="color:red">*</span>
-                                        </label>
-
-                                        <input type="text" name="name" class="form-control" placeholder="Price">
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <label>Model
-                                        </label>
-
-                                        <input type="text" name="name" class="form-control" placeholder="Model">
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <label>Model number
-                                        </label>
-
-                                        <input type="text" name="name" class="form-control" placeholder="example : 15700ST">
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <label>Size
-                                        </label>
-
-                                        <input type="text" name="name" class="form-control" placeholder="example : 42mm">
-                                    </div>
-
-                                    <div class="form-group col-sm-6">
-                                        <label>Gender </label>
-                                        <select class="form-control" name="gender" id="gender">
-                                            <option value="mens">Mens</option>
-                                            <option value="womens">Womens</option>
-                                            <option value="unisex">Unisex</option>
-
-                                        </select>
-                                    </div>
-
-
-                                    <div class="form-group col-sm-6">
-                                        <label>Condition </label>
-                                        <select class="form-control" name="condition" id="condition">
-                                            <option value="new">New</option>
-                                            <option value="excellent">excellent</option>
-                                            <option value="good">good</option>
-                                            <option value="fair">fair</option>
-                                            <option value="poor">poor</option>
-                                            <option value="damaged">damaged </option>
-
-                                        </select>
-                                    </div>
-
-
-                                    <div class="form-group col-sm-12">
-                                        <label>City </label>
-                                        <select class="form-control" name="city" id="city">
-
-
-                                            <option value="524">الرياض</option>
-
-
-
-
-
-
-                                            <option value="525">مكة</option>
-
-
-
-
-
-
-                                            <option value="526">المدينة المنورة</option>
-
-
-
-
-
-
-                                            <option value="527">حائل</option>
-
-
-
-
-
-
-                                            <option value="528">تبوك</option>
-
-
-
-
-
-
-                                            <option value="529">الدمام</option>
-
-
-
-
-
-
-                                            <option value="530">الاحساء</option>
-
-
-
-
-
-
-                                            <option value="531">القطيف</option>
-
-
-
-
-
-
-                                            <option value="532">خميس مشيط</option>
-
-
-
-
-
-
-                                            <option value="533">الطائف</option>
-
-
-
-
-
-
-                                            <option value="534">نجران</option>
-
-
-
-
-
-
-                                            <option value="535">حفر الباطن</option>
-
-
-
-
-
-
-                                            <option value="536">الجبيل</option>
-
-
-
-
-
-
-                                            <option value="537">القصيم</option>
-
-
-
-
-
-
-                                            <option value="538">ابها</option>
-
-
-
-
-
-
-                                            <option value="539">الخرج</option>
-
-
-
-
-
-
-                                            <option value="540">الطائف</option>
-
-
-
-
-
-
-                                            <option value="541">ينبع </option>
-
-
-
-
-
-
-                                            <option value="542">الخبر</option>
-
-
-
-
-
-
-                                            <option value="543">عرعر</option>
-
-
-
-
-
-
-                                            <option value="544">الخفجي</option>
-
-
-
-
-
-
-                                            <option value="545">عنيزة</option>
-
-
-
-
-
-
-                                            <option value="546">سكاكا</option>
-
-
-
-
-
-
-                                            <option value="547">جيزان</option>
-
-
-
-
-
-
-                                            <option value="548">القريات</option>
-
-
-
-
-
-
-
-
-
-
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-4">
-                                            <div class="form-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="Check1">
-                                                    <label class="form-check-label" for="Check1">box</label>
-                                                  </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                            <div class="form-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="Check2">
-                                                    <label class="form-check-label" for="Check2">papers</label>
-                                                  </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                            <div class="form-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="Check3">
-                                                    <label class="form-check-label" for="Check3">receipt</label>
-                                                  </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                                <span class="d-block ">Images</span>
-                                                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                                                <label for="file" class="btn"><strong>Choose a file</strong><span></span></label>
-                                                <p>(it is recommended to have at least 4 good quality pictures for the item)</p>
-                                            </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                            <div class="form-group">
-                                                    <label>Descrption ar</label>
-                                                    <textarea class="form-control"></textarea>
-                                                  </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                            <div class="form-group">
-                                                    <label>Descrption en</label>
-                                                    <textarea class="form-control"></textarea>
-                                                  </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                            <div class="form-group">
-                                                    <label>Mobile
-                                                            <span style="color:red">*</span>
-                                                        </label>
-                
-                                                        <input type="text" name="name" class="form-control" placeholder="Mobile">
-                                                  </div>
-                                    </div>
-                                    <button type="submit" class="btn"> New Ads</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--contact end-->
-
-
-            <!--newsletter start-->
-
-            <section class="theme-bg py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12">
-                            <h2 class="title">News
-                                <span>letter</span>
-                            </h2>
-                        </div>
-                        <div class="col-lg-8 col-md-12 md-mt-3">
-                            <div class="subscribe-form">
-                                <form id="mc-form" class="group row align-items-center">
-                                    <div class="col-sm-8">
-                                        <input type="email" value="" name="EMAIL" class="email box-shadow" id="mc-email" placeholder="Email Address" required="">
-                                    </div>
-                                    <div class="col-sm-4 xs-mt-1">
-                                        <input class="btn btn-white btn-circle" type="submit" name="subscribe" value="Subscribe">
-                                    </div>
-                                    <label for="mc-email" class="subscribe-message"></label>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--newsletter end-->
 
         </div>
-
-        <!--body content end-->
-
-
-        <!--footer start-->
-
-        <footer class="footer dark-bg">
-            <div class="primary-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 footer-list">
-                            <h5>Information</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="product.html">Top Sellers</a>
-                                </li>
-                                <li>
-                                    <a href="product.html">New Product</a>
-                                </li>
-                                <li>
-                                    <a href="#">Delivery information</a>
-                                </li>
-                                <li>
-                                    <a href="terms-and-conditions.html">Terms & Conditions</a>
-                                </li>
-                                <li>
-                                    <a href="#">Special</a>
-                                </li>
-                                <li>
-                                    <a href="#">Help Center</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 xs-mt-5 footer-list">
-                            <h5>Customer Service</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="order-tracking.html">Order Tracking</a>
-                                </li>
-                                <li>
-                                    <a href="contact-1.html">Help & Contact</a>
-                                </li>
-                                <li>
-                                    <a href="product.html">Career</a>
-                                </li>
-                                <li>
-                                    <a href="return-policy.html">Returns Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Product Support</a>
-                                </li>
-                                <li>
-                                    <a href="#">Legal Notice</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 md-mt-5 footer-list">
-                            <h5>My Account</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">My Account</a>
-                                </li>
-                                <li>
-                                    <a href="#">Personal Information</a>
-                                </li>
-                                <li>
-                                    <a href="#">Order History</a>
-                                </li>
-                                <li>
-                                    <a href="#">Address</a>
-                                </li>
-                                <li>
-                                    <a href="product-wishlist.html">Wish List</a>
-                                </li>
-                                <li>
-                                    <a href="#">Newsletter</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 md-mt-5">
-                            <h5>Get In Touch</h5>
-                            <ul class="media-icon list-unstyled">
-                                <li class="mb-4">
-                                    <p class="mb-0">423B, Road Wordwide Country, USA</p>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="mailto:htinfotech7@gmail.com">htinfotech7@gmail.com</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a href="tel:+912345678900">+91-234-567-8900</a>
-                                </li>
-                                <li>
-                                    <p class="mb-0">Working Hours: 9:00am - 8:00pm</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row client-logo mt-10">
-                        <div class="col-md-12">
-                            <div class="owl-carousel owl-theme no-pb" data-dots="false" data-items="5" data-md-items="4" data-sm-items="3" data-margin="30"
-                                data-autoplay="true">
-                                <div class="item">
-                                    <img class="img-center" src="images/client/01.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-center" src="images/client/01.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-center" src="images/client/01.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-center" src="images/client/01.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-center" src="images/client/01.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-center" src="images/client/01.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="secondary-footer text-center">
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-12">
+                <span>جميع الحقوق محفوظة لدى موقع © 2018 </span>
+              </div>
             </div>
-            <div class="secondary-footer text-center">
-                <div class="container">
-                    <div class="copyright">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <span class="text-white">Copyright 2018 Oveltyshop 
-                                    Copyright 2018 Oveltyshop  | All Rights Reserved</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        <!--footer end-->
+    <!--footer end-->
 
 
-    </div>
+  </div>
 
-    <!-- page wrapper end -->
+  <!-- page wrapper end -->
 
 
 
 
-    <!--back-to-top start-->
 
-    <div id="scroll-top">
-        <a class="top arrow" href="#top">
-            <i class="fas fa-angle-double-up"></i>
-        </a>
-    </div>
+  <!--back-to-top start-->
 
-    <!--back-to-top end-->
+  <div id="scroll-top">
+    <a class="top arrow" href="#top">
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+  </div>
 
-
-    <!-- inject js start -->
-
-    <!--== jquery -->
-    <script src="js/jquery.3.3.1.min.js"></script>
-
-    <!--== popper -->
-    <script src="js/popper.min.js"></script>
-
-    <!--== bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!--== appear -->
-    <script src="js/jquery.appear.js"></script>
-
-    <!--== modernizr -->
-    <script src="js/modernizr.js"></script>
-
-    <!--== nice-select -->
-    <script src="js/jquery.nice-select.js"></script>
-
-    <!--== jquery-ui -->
-    <script src="js/jquery-ui.js"></script>
-
-    <!--== search -->
-    <script src="js/search.js"></script>
-
-    <!--== menu -->
-    <script src="js/menu/jquery.smartmenus.js"></script>
-
-    <!--== magnific-popup -->
-    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!--== owl-carousel -->
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
-
-    <!--== slit-slider -->
-    <script src="js/slit-slider/jquery.ba-cond.min.js"></script>
-    <script src="js/slit-slider/jquery.slitslider.js"></script>
-
-    <!--== slick-slider -->
-    <script src="js/slick-slider/slick.js"></script>
-
-    <!--== jarallax -->
-    <script src="js/jarallax/jarallax.min.js"></script>
-
-    <!--== countdown -->
-    <script src="js/countdown/jquery.countdown.min.js"></script>
-
-    <!--== isotope -->
-    <script src="js/isotope/isotope.pkgd.min.js"></script>
-
-    <!--== contact-form -->
-    <script src="js/contact-form/contact-form.js"></script>
-
-    <!--== validate -->
-    <script src="js/contact-form/jquery.validate.min.js"></script>
-
-    <!--== map api -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-
-    <!--== map -->
-    <script src="js/map.js"></script>
-
-    <!--== wow -->
-    <script src="js/wow.min.js"></script>
+  <!--back-to-top end-->
 
 
+  <!-- inject js start -->
 
-    <!--== theme-script -->
-    <script src="js/theme-script.js"></script>
+  <!--== jquery -->
+  <script src="js/jquery.3.3.1.min.js"></script>
 
-    <!-- inject js end -->
+  <!--== popper -->
+  <script src="js/popper.min.js"></script>
+
+  <!--== bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--== appear -->
+  <script src="js/jquery.appear.js"></script>
+
+  <!--== modernizr -->
+  <script src="js/modernizr.js"></script>
+
+  <!--== nice-select -->
+  <script src="js/jquery.nice-select.js"></script>
+
+
+  <!--== search -->
+  <script src="js/search.js"></script>
+
+  <!--== menu -->
+  <script src="js/menu/jquery.smartmenus.js"></script>
+
+  <!--== owl-carousel -->
+  <script src="js/owl-carousel/owl.carousel.min.js"></script>
+
+  <!--== slit-slider -->
+  <script src="js/slit-slider/jquery.ba-cond.min.js"></script>
+  <script src="js/slit-slider/jquery.slitslider.js"></script>
+
+
+  <!--== contact-form -->
+  <script src="js/contact-form/contact-form.js"></script>
+
+  <!--== validate -->
+  <script src="js/contact-form/jquery.validate.min.js"></script>
+
+  <!--== map api -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+  <!--== map -->
+  <script src="js/map.js"></script>
+
+  <!--== wow -->
+  <script src="js/wow.min.js"></script>
+
+
+  <script src="js/fotorama.js"></script>
+
+  <!--== theme-script -->
+  <script src="js/theme-script.js"></script>
+
+  <!-- inject js end -->
 
 </body>
 
-<script>
-    'undefined' === typeof _trfq || (window._trfq = []);
-    'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({
-        'tccl.baseHost': 'secureserver.net'
-    }), _trfd.push({
-        'ap': 'cpsh'
-    }, {
-        'server': 'n3plcpnl0082'
-    }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
-</script>
-<script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 
 </html>
